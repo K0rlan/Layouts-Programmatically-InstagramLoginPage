@@ -25,6 +25,7 @@ class EnterByFacebookView: UIView {
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupViews()
+        setAction()
         
     }
     
@@ -53,5 +54,13 @@ class EnterByFacebookView: UIView {
         titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -18 ).isActive = true
     }
     
+    private func setAction(){
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(enterByFacebookPressed(sender:)))
+        self.addGestureRecognizer(gesture)
+    }
+    
+    @objc private func enterByFacebookPressed(sender: UITapGestureRecognizer){
+        print(#function)
+    }
     
 }

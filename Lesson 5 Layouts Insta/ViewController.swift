@@ -96,8 +96,6 @@ class ViewController: UIViewController {
     
     lazy var enterByFacebookView: EnterByFacebookView = {
         let view = EnterByFacebookView()
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(enterByFacebookPressed))
-        self.view.addGestureRecognizer(gesture)
         return view
     }()
     
@@ -240,9 +238,7 @@ class ViewController: UIViewController {
         print(#function)
     }
     
-    @objc func enterByFacebookPressed(sender: UIButton){
-        print(#function)
-    }
+    
     
     @objc func closeButtonPressed(sender: UIButton){
         print(#function)
